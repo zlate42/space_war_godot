@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Planet.gd" type="Script" id=1]
+[ext_resource path="res://art/earth-planet-png-187.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 119.671
+
+[node name="Planet" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="earth-planet-png-187" type="Sprite" parent="."]
+position = Vector2( -0.699219, -2.02173 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.699219, -2.02173 )
+shape = SubResource( 1 )
