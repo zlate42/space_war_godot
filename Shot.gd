@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 export var speed = Vector2(150, 0)
 
@@ -32,3 +32,9 @@ func update_forces(delta):
 #	print("screen exit")
 #	self.queue_free()
 
+
+
+func _on_Shot_area_entered(area):
+
+	self.queue_free()
+	pass # Replace with function body.
